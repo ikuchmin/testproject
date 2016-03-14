@@ -1,10 +1,10 @@
 package ru.example;
 
-class UnmodifiedContainer<V, E extends PojoB<V>> implements Container<V, E>{
+class UnmodifiedContainer<V, E extends PojoB<V>> implements Container<V, E> {
     @Delegate
     private final Container<V, E> container
 
-    UnmodifiedContainer(UnmodifiedContainer<V, E> unmodifiedContainer) {
+    UnmodifiedContainer(Container<V, E> unmodifiedContainer) {
         this.container = unmodifiedContainer
     }
 
